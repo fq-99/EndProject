@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fq.dao.LoginLogMapper">
+    <resultMap id="BaseResultMap" type="fq.vo.LoginLog">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="loginDate" jdbcType="DATE" property="loginDate" />
+        <result column="ip" jdbcType="VARCHAR" property="ip" />
+        <result column="browser" jdbcType="VARCHAR" property="browser" />
+        <result column="loginMode" jdbcType="VARCHAR" property="loginMode" />
+        <result column="equipment" jdbcType="VARCHAR" property="equipment" />
+    </resultMap>
+
+    <select id="queryAll" resultMap="BaseResultMap">
+        select * from `login_log`
+    </select>
+
+
+</mapper>
